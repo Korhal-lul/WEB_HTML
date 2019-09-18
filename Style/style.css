@@ -50,8 +50,25 @@
 }
 
 .main{
-    padding-top: 75px;
+    padding-top: 70px;
     padding-bottom: 70px;
+}
+#mainImage img{
+  width: 100%;
+}
+
+
+label[for="btn_menu"]{
+  display: none;
+}
+
+#btn_menu{
+  display: none;
+  float: right;
+}
+
+.btn{
+  height: 0px;
 }
 
 @media screen and (max-width: 600px) {
@@ -66,6 +83,56 @@
     display: block;
     text-align: left;
   }
+  #btn_menu:checked ~ .menu{
+    margin-top: 0px;
+  }
+
+  .btn{
+    width: 100%;
+    height: 42px;
+    background-color: #0069AA;
+    overflow: hidden;
+    position: fixed;
+    /*Opacity start*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    filter: alpha(opacity=80);
+    -moz-opacity: 0.80;
+    -khtml-opacity: 0.8;
+    opacity: 0.8;
+    /*Opacity end*/
+  }
+
+  .btn a img{
+    width: 15%;
+  }
+
+  .menu{
+    margin-top: -100%;
+    transition: all .4s;
+    margin-left: 0px;
+    padding-top: 42
+  }
+
+  .menu a{
+    float: none;
+  }
+
+  .menu a img{
+    width: 0px;
+    height: 0px;
+  }
+
+  label[for="btn_menu"]{
+    display: block;
+    margin-right: 1%;
+    font-size: 60px;
+    font-weight: bold;
+    top: -12px;
+    z-index: 5;
+    position: absolute;
+    margin-left: 90%;
+  }
+
 
 }
 
@@ -168,7 +235,7 @@
 }
 
 .endereco{
-    /*border: red 2px solid;*/
+    border: red 2px solid;
     padding-top: 2%;
     color: white;
     padding-bottom: 1%;
